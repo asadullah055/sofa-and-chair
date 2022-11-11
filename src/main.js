@@ -64,7 +64,7 @@ function countDownTimer(start, id) {
   
   `;
   if (distance < 0) {
-    // clearInterval(stop1);
+    clearInterval(stop1);
     clearInterval(stop2);
     active.innerHTML = "Expired";
     active2.innerHTML = "Expired";
