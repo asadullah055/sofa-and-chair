@@ -1,0 +1,79 @@
+<div class="left-area">
+          <!-- slider -->
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slider-content">
+                <div class="details">
+                  <h2>The best quality Products guaranteed</h2>
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Rem, non?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          const openBtn = document.querySelector("#open-btn");
+const nav = document.querySelector(".navbar-nav");
+const closeBtn = document.getElementById("closeBtn");
+
+// for menu
+openBtn.addEventListener("click", () => {
+  nav.classList.add("active");
+  openBtn.classList.add("hide");
+});
+closeBtn.addEventListener("click", () => {
+  nav.classList.remove("active");
+  openBtn.classList.remove("hide");
+});
+// for coming soon
+//////////////////////
+const times = "Nov 12, 2023 00:00:00";
+
+const box = document.querySelector(".validity");
+function counter() {
+  const countDownDate = new Date(times).getTime();
+  const now = new Date().getTime();
+  const distance = countDownDate - now;
+
+  //days
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  if (days < 10) {
+    days = "0" + days;
+  }
+  // hours
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  // minutes
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  // second
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
+  document.getElementById("day").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("second").innerHTML = seconds;
+
+  if (distance < 0) {
+    clearInterval(stop);
+    [...box.children].forEach((ele) => {
+      ele.style.backgroundColor = "var(--like-red)";
+    });
+    document.getElementById("day").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("second").innerHTML = "00";
+  }
+}
+let stop = setInterval(() => {
+  counter();
+}, 1000);
+counter();
