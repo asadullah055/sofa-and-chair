@@ -1,8 +1,15 @@
-const active2 = document.getElementById("active2");
-const active = document.getElementById("active");
+// clickable button
+
+function copyCoupon(e) {
+  let text = e.innerHTML.trim();
+  navigator.clipboard.writeText(text);
+  e.innerHTML = "Copied!";
+  setInterval(() => {
+    e.innerHTML = text;
+  }, 1000);
+}
 const setEndDate1 = "Nov 15, 2022 0:0:0";
 const setEndDate2 = "Nov 10, 2022 0:0:0";
-const validity = document.querySelectorAll(".validity");
 
 function startCountDownDate(dateValue) {
   const countDownDate = new Date(dateValue).getTime();

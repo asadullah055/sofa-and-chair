@@ -12,15 +12,6 @@ closeBtn.addEventListener("click", () => {
   nav.classList.remove("active");
   openBtn.classList.remove("hide");
 });
-// clickable button
 
-function copyCoupon(e) {
-  let text = e.innerHTML.trim();
-  navigator.clipboard.writeText(text);
-  e.innerHTML = "Copied!";
-  setInterval(() => {
-    e.innerHTML = text;
-  }, 1000);
-}
 
 // for coming soon

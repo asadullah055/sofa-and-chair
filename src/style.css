@@ -101,8 +101,9 @@ body {
 .banner-wrapper {
   display: flex;
   gap: 20px;
+  overflow: hidden;
 }
-.left-area {
+.slider-area {
   width: 55%;
   height: 200px;
   border: 1px solid;
@@ -120,7 +121,7 @@ body {
 .offer-title {
   background-color: var(--light-orange);
   text-align: center;
-  padding: 10px;
+  /* padding: 10px; */
   font-weight: 400;
 }
 .offer-details {
@@ -209,37 +210,4 @@ body {
   font-size: 12px;
   margin-top: 5px;
 }
-/* =========responsive =========== */
-@media (max-width: 700px) {
-  .navbar-nav {
-    position: fixed;
-    top: 48px;
-    left: -100%;
-    width: 100%;
-    max-width: 250px;
-    height: 100vh;
-    display: block;
-    background-color: #e6fff4;
-    transition: all 0.3s ease;
-  }
-  .navbar-nav.active {
-    left: 0;
-  }
-  .navbar-nav li {
-    margin-top: 20px;
-  }
-  .navbar-nav li a {
-    color: #000;
-  }
-  .bi-list {
-    color: #fff;
-    font-size: 25px;
-    display: block;
-  }
-  .icon {
-    display: block;
-  }
-  .icon.hide {
-    display: none;
-  }
-}
+

@@ -1,0 +1,54 @@
+/* =========responsive =========== */
+@media (max-width: 1120px) {
+  .banner-wrapper {
+    gap: 0;
+  }
+  .coupon {
+    padding: 10px 0;
+  }
+  .btn {
+    padding: 7px 2px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1023px) {
+  .offer {
+    display: none;
+  }
+  .slider-area {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .navbar-nav {
+    position: fixed;
+    top: 48px;
+    left: -100%;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    display: block;
+    background-color: #e6fff4;
+    transition: all 0.3s ease;
+  }
+  .navbar-nav.active {
+    left: 0;
+  }
+  .navbar-nav li {
+    margin-top: 20px;
+  }
+  .navbar-nav li a {
+    color: #000;
+  }
+  .bi-list {
+    color: #fff;
+    font-size: 25px;
+    display: block;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+}
